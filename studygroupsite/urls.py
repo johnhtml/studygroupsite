@@ -7,5 +7,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('base.urls')), # include the view of the base sub-app
+    path('api/', include('base.api.urls'))
 ]
 
