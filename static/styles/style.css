@@ -426,7 +426,7 @@ a {
   max-width: 48rem;
   min-height: 40rem;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -46%);
   background-color: var(--color-dark);
