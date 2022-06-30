@@ -77,7 +77,7 @@ def home(request):
 
     room_count = rooms.count()
     room_messages = Message.objects.filter(Q(rooms__topic__name__icontains=q))
-    topics = Topic.objects.all()[0:5]
+    topics = Topic.objects.all()[0:4]
 
     context = {'rooms': rooms, 'topics': topics,
     'room_count': room_count, 'room_messages': room_messages}
@@ -224,3 +224,7 @@ def topicsPage(request):
 def activityPage(request):
     room_messages = Message.objects.all()
     return render(request, 'base/activity.html', {'room_messages': room_messages})
+
+
+def handle_not_found(request, exception):
+    return render(request, 'base/notfound.html')

@@ -10,3 +10,5 @@ urlpatterns = [
     path('api/', include('base.api.urls'))
 ]
 
+
+handler404 = "base.views.handle_not_found"
